@@ -1,7 +1,6 @@
-import 'package:bookly_app/Core/utils/assets.dart';
+import 'package:bookly_app/Features/splash/presentation/views/widgets/fading_logo.dart';
 import 'package:bookly_app/Features/splash/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -14,20 +13,18 @@ class _SplashViewBodyState extends State<SplashViewBody>
     with SingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<Offset> slidingAnimation;
+  late Animation<double> opacityAnimation;
 
   @override
   void initState() {
     super.initState();
-    animationController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 800),
-    );
+    initAnimation();
+  }
 
-    slidingAnimation =
-        Tween<Offset>(begin: const Offset(0, 10), end: Offset.zero)
-            .animate(animationController);
-
-    animationController.forward();
+  @override
+  void dispose() {
+    super.dispose();
+    animationController.dispose();
   }
 
   @override
@@ -36,16 +33,36 @@ class _SplashViewBodyState extends State<SplashViewBody>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        SvgPicture.asset(
-          AssetsData.logo,
-          height: 65,
-        ),
+        FadingLogo(opacityAnimation: opacityAnimation),
         const SizedBox(
           height: 20,
         ),
-        // Equal to SetState, But updating the current widget only.
-        SlidingText(slidingAnimation: slidingAnimation),
+        SlidingText(
+          slidingAnimation: slidingAnimation,
+          opacityAnimation: opacityAnimation,
+        ),
       ],
     );
+  }
+
+  void initAnimation() {
+    animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1500),
+    );
+
+    // Sliding Animation
+    slidingAnimation =
+        Tween<Offset>(begin: const Offset(0, 10), end: Offset.zero)
+            .animate(animationController);
+
+    // Opacity Animation
+    opacityAnimation = Tween<double>(begin: 0, end: 1).animate(
+      CurvedAnimation(
+        parent: animationController,
+        curve: const Interval(0.5, 1.0),
+      ),
+    );
+    animationController.forward();
   }
 }

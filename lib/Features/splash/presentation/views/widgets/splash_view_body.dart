@@ -1,6 +1,9 @@
+import 'package:bookly_app/Features/home/presentation/views/home_view.dart';
 import 'package:bookly_app/Features/splash/presentation/views/widgets/fading_logo.dart';
 import 'package:bookly_app/Features/splash/presentation/views/widgets/sliding_text.dart';
+import 'package:bookly_app/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -19,6 +22,16 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void initState() {
     super.initState();
     initAnimation();
+    Future.delayed(
+      const Duration(seconds: 3),
+      () {
+        Get.to(
+          const HomeView(),
+          transition: Transition.fadeIn,
+          duration: kTransitionDuration,
+        );
+      },
+    );
   }
 
   @override

@@ -1,3 +1,4 @@
+import 'package:bookly_app/Core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -8,7 +9,7 @@ class SplashViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SvgPicture.asset('assets/svg/Logo.svg'),
+        SvgPicture.asset(AssetsData.logo),
       ],
     );
   }

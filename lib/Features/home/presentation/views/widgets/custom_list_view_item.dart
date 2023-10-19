@@ -1,4 +1,5 @@
 import 'package:bookly_app/Core/utils/assets.dart';
+import 'package:bookly_app/Core/utils/responsive.dart';
 import 'package:flutter/material.dart';
 
 class CustomListViewItem extends StatelessWidget {
@@ -9,7 +10,7 @@ class CustomListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 150,
+      width: Responsive.screenWidth(context) * (150 / 224),
       height: 224,
       decoration: BoxDecoration(
         image: const DecorationImage(

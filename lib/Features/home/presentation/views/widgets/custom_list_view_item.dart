@@ -1,5 +1,4 @@
 import 'package:bookly_app/Core/utils/assets.dart';
-import 'package:bookly_app/Core/utils/responsive.dart';
 import 'package:flutter/material.dart';
 
 class CustomListViewItem extends StatelessWidget {
@@ -10,7 +9,6 @@ class CustomListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: Responsive.screenWidth(context) * 0.36,
       child: AspectRatio(
         aspectRatio: 150 / 224,
         child: Container(
@@ -20,7 +18,6 @@ class CustomListViewItem extends StatelessWidget {
               fit: BoxFit.fill,
             ),
             borderRadius: BorderRadius.circular(18),
-            color: Colors.deepOrange,
           ),
         ),
       ),

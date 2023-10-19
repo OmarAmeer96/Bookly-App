@@ -9,21 +9,29 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        SvgPicture.asset(
-          AssetsData.logo,
-          width: 90,
-        ),
-        IconButton(
-          icon: SvgPicture.asset(
-            AssetsData.searchIcon,
-            width: 26,
+    return Padding(
+      padding: const EdgeInsets.only(
+        left: 25,
+        right: 25 - 8,
+        top: 45,
+        bottom: 12,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          SvgPicture.asset(
+            AssetsData.logo,
+            width: 90,
           ),
-          onPressed: () {},
-        ),
-      ],
+          IconButton(
+            icon: SvgPicture.asset(
+              AssetsData.searchIcon,
+              width: 26,
+            ),
+            onPressed: () {},
+          ),
+        ],
+      ),
     );
   }
 }

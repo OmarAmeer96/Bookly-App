@@ -1,10 +1,9 @@
-import 'package:bookly_app/Core/utils/assets.dart';
 import 'package:bookly_app/Core/utils/responsive.dart';
 import 'package:bookly_app/Core/utils/styles.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/best_seller_list_view_item_image.dart';
+import 'package:bookly_app/Features/home/presentation/views/widgets/book_rating.dart';
 import 'package:bookly_app/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
   const BestSellerListViewItem({super.key});
@@ -61,26 +60,7 @@ class BestSellerListViewItem extends StatelessWidget {
                     SizedBox(
                       width: Responsive.screenWidth(context) * 0.08,
                     ),
-                    SvgPicture.asset(
-                      AssetsData.star,
-                      width: 18,
-                    ),
-                    SizedBox(
-                      width: Responsive.screenWidth(context) * 0.01,
-                    ),
-                    const Text(
-                      "4.8",
-                      style: Styles.montserratMedium,
-                    ),
-                    SizedBox(
-                      width: Responsive.screenWidth(context) * 0.03,
-                    ),
-                    Text(
-                      "(2390)",
-                      style: Styles.montserratRegular.copyWith(
-                        color: kTextColor1,
-                      ),
-                    ),
+                    const BookRating(),
                   ],
                 ),
               ),

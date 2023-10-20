@@ -17,8 +17,8 @@ class BestSellerListViewItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           const BestSellerListViewItemImage(),
-          const SizedBox(
-            width: 20,
+          SizedBox(
+            width: Responsive.screenWidth(context) * 0.08,
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,

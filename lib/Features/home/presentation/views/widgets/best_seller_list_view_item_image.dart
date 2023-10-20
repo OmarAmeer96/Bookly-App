@@ -11,8 +11,9 @@ class BestSellerListViewItemImage extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 70 / 105,
       child: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(18),
+          image: const DecorationImage(
             image: AssetImage(
               AssetsData.testImage2,
             ),

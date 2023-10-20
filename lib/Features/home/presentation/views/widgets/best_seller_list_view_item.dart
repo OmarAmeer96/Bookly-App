@@ -7,14 +7,14 @@ class BestSellerListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        SizedBox(
-          height: Responsive.screenHeight(context) * 0.163,
-          child: const BestSellerListViewItemImage(),
-        ),
-      ],
+    return SizedBox(
+      height: Responsive.screenHeight(context) * 0.163,
+      child: const Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          BestSellerListViewItemImage(),
+        ],
+      ),
     );
   }
 }

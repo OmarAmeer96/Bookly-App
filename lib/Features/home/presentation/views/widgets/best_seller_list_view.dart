@@ -11,8 +11,9 @@ class BestSellerListView extends StatelessWidget {
       height: Responsive.screenHeight(context) * 0.4936,
       child: ListView.builder(
         padding: EdgeInsets.zero,
-        itemCount: 5,
-        physics: const BouncingScrollPhysics(),
+        itemCount: 10,
+        shrinkWrap: true,
+        physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
           return const Padding(
             padding: EdgeInsets.only(bottom: 20),

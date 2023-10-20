@@ -24,46 +24,59 @@ class BestSellerListViewItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
-                "Batman\nThe Dark Knight Rises",
-                style: Styles.gtSectraFineRegular,
-              ),
-              Text(
-                "J.K. Rowling",
-                style: Styles.montserratMedium.copyWith(
-                  color: kTextColor1,
+              SizedBox(
+                width: Responsive.screenWidth(context) * 0.59,
+                child: const Text(
+                  "Batman The Dark Knight Rises",
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: Styles.gtSectraFineRegular,
                 ),
               ),
-              Row(
-                children: [
-                  const Text(
-                    "19.99 \$",
-                    style: Styles.montserratBold,
+              SizedBox(
+                width: Responsive.screenWidth(context) * 0.59,
+                child: Text(
+                  "J.K. Rowling",
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: Styles.montserratMedium.copyWith(
+                    color: kTextColor1,
                   ),
-                  SizedBox(
-                    width: Responsive.screenWidth(context) * 0.09,
-                  ),
-                  SvgPicture.asset(
-                    AssetsData.star,
-                    width: 18,
-                  ),
-                  SizedBox(
-                    width: Responsive.screenWidth(context) * 0.01,
-                  ),
-                  const Text(
-                    "4.8",
-                    style: Styles.montserratMedium,
-                  ),
-                  SizedBox(
-                    width: Responsive.screenWidth(context) * 0.03,
-                  ),
-                  Text(
-                    "(2390)",
-                    style: Styles.montserratRegular.copyWith(
-                      color: kTextColor1,
+                ),
+              ),
+              SizedBox(
+                width: Responsive.screenWidth(context) * 0.61,
+                child: Row(
+                  children: [
+                    const Text(
+                      "19.99 \$",
+                      style: Styles.montserratBold,
                     ),
-                  ),
-                ],
+                    SizedBox(
+                      width: Responsive.screenWidth(context) * 0.08,
+                    ),
+                    SvgPicture.asset(
+                      AssetsData.star,
+                      width: 18,
+                    ),
+                    SizedBox(
+                      width: Responsive.screenWidth(context) * 0.01,
+                    ),
+                    const Text(
+                      "4.8",
+                      style: Styles.montserratMedium,
+                    ),
+                    SizedBox(
+                      width: Responsive.screenWidth(context) * 0.03,
+                    ),
+                    Text(
+                      "(2390)",
+                      style: Styles.montserratRegular.copyWith(
+                        color: kTextColor1,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

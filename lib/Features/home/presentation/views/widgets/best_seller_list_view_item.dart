@@ -25,7 +25,7 @@ class BestSellerListViewItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                "Harry Potter\nand the Goblet of Fire",
+                "Batman\nThe Dark Knight Rises",
                 style: Styles.gtSectraFineRegular,
               ),
               Text(

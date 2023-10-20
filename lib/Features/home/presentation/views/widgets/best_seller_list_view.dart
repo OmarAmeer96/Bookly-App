@@ -10,7 +10,7 @@ class BestSellerListView extends StatelessWidget {
     return SizedBox(
       height: Responsive.screenHeight(context) * 0.4936,
       child: ListView.builder(
-        padding: const EdgeInsets.all(0),
+        padding: EdgeInsets.zero,
         itemCount: 5,
         physics: const BouncingScrollPhysics(),
         itemBuilder: (context, index) {

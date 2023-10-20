@@ -14,7 +14,7 @@ abstract class Styles {
     fontFamily: 'Montserrat-SemiBold',
   );
   static const montserratBold = TextStyle(
-    fontSize: 18,
+    fontSize: 24,
     fontFamily: 'Montserrat-Bold',
   );
   static const gtSectraFineRegular = TextStyle(

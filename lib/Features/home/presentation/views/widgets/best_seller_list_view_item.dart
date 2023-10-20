@@ -33,6 +33,9 @@ class BestSellerListViewItem extends StatelessWidget {
                   style: Styles.gtSectraFineRegular,
                 ),
               ),
+              const SizedBox(
+                height: 3,
+              ),
               SizedBox(
                 width: Responsive.screenWidth(context) * 0.59,
                 child: Text(
@@ -43,6 +46,9 @@ class BestSellerListViewItem extends StatelessWidget {
                     color: kTextColor1,
                   ),
                 ),
+              ),
+              const SizedBox(
+                height: 3,
               ),
               SizedBox(
                 width: Responsive.screenWidth(context) * 0.61,

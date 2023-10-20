@@ -19,52 +19,54 @@ class BestSellerListViewItem extends StatelessWidget {
           SizedBox(
             width: Responsive.screenWidth(context) * 0.08,
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                width: Responsive.screenWidth(context) * 0.59,
-                child: const Text(
-                  "Batman The Dark Knight Rises",
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: Styles.gtSectraFineRegular,
-                ),
-              ),
-              const SizedBox(
-                height: 3,
-              ),
-              SizedBox(
-                width: Responsive.screenWidth(context) * 0.59,
-                child: Text(
-                  "J.K. Rowling",
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: Styles.montserratMedium.copyWith(
-                    color: kTextColor1,
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: Responsive.screenWidth(context) * 0.59,
+                  child: const Text(
+                    "Batman The Dark Knight Rises",
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: Styles.gtSectraFineRegular,
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 3,
-              ),
-              SizedBox(
-                width: Responsive.screenWidth(context) * 0.61,
-                child: Row(
-                  children: [
-                    const Text(
-                      "19.99 \$",
-                      style: Styles.montserratBold,
-                    ),
-                    SizedBox(
-                      width: Responsive.screenWidth(context) * 0.08,
-                    ),
-                    const BookRating(),
-                  ],
+                const SizedBox(
+                  height: 3,
                 ),
-              ),
-            ],
+                SizedBox(
+                  width: Responsive.screenWidth(context) * 0.59,
+                  child: Text(
+                    "J.K. Rowling",
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: Styles.montserratMedium.copyWith(
+                      color: kTextColor1,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 3,
+                ),
+                SizedBox(
+                  width: Responsive.screenWidth(context) * 0.61,
+                  child: Row(
+                    children: [
+                      const Text(
+                        "19.99 \$",
+                        style: Styles.montserratBold,
+                      ),
+                      SizedBox(
+                        width: Responsive.screenWidth(context) * 0.08,
+                      ),
+                      const BookRating(),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),

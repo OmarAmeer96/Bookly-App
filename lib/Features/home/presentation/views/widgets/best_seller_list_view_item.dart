@@ -1,4 +1,5 @@
-import 'package:bookly_app/Core/utils/assets.dart';
+import 'package:bookly_app/Core/utils/responsive.dart';
+import 'package:bookly_app/Features/home/presentation/views/widgets/best_seller_list_view_item_image.dart';
 import 'package:flutter/material.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
@@ -7,15 +8,11 @@ class BestSellerListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Container(
-          width: 90,
-          height: 130,
-          decoration: const BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage(
-            AssetsData.testImage2,
-          ))),
+        SizedBox(
+          height: Responsive.screenHeight(context) * 0.163,
+          child: const BestSellerListViewItemImage(),
         ),
       ],
     );
